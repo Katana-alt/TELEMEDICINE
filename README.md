@@ -1,25 +1,56 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Telemedicine Solutions</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+<!-- Sidebar -->
+<aside class="sidebar">
+  <!-- Language Selector -->
+  <div class="language-selector">
+    <button id="english-btn">English</button>
+    <button id="swahili-btn">Kiswahili</button>
+  </div>
 
-  <!-- Header -->
-  <header class="header">
-    <div class="logo">
-      <img src="logo.png" alt="Telemedicine Logo">
-      <h1>Telemedicine Solutions</h1>
-    </div>
-  </header>
+  <!-- Search Bar -->
+  <div class="search-bar">
+    <input type="text" id="search-input" placeholder="Search...">
+    <button>Search</button>
+  </div>
 
-  <!-- Navigation Bar -->
-  <nav class="navbar">
-    <ul class="nav-links">
-      <li><a href="#home">Home</a></li>
+  <!-- Sidebar Links -->
+  <ul class="sidebar-links">
+    <li><a id="telemedicine-link" href="https://www.health.go.ke/telemedicine/" target="_blank">Telemedicine Benefits</a></li>
+    <li><a id="how-it-works-link" href="https://www.medihealthkenya.com/how-telemedicine-works" target="_blank">How It Works</a></li>
+    <li><a id="find-doctor-link" href="https://www.kenyamedicaldirectory.co.ke/" target="_blank">Find a Doctor</a></li>
+    <li><a id="patient-reviews-link" href="#">Patient Reviews</a></li>
+  </ul>
+</aside>
+
+<script>
+  // Toggle between English and Kiswahili
+  const englishBtn = document.getElementById('english-btn');
+  const swahiliBtn = document.getElementById('swahili-btn');
+
+  const searchInput = document.getElementById('search-input');
+  const telemedicineLink = document.getElementById('telemedicine-link');
+  const howItWorksLink = document.getElementById('how-it-works-link');
+  const findDoctorLink = document.getElementById('find-doctor-link');
+  const patientReviewsLink = document.getElementById('patient-reviews-link');
+
+  englishBtn.addEventListener('click', () => {
+    // Switch to English
+    searchInput.placeholder = 'Search...';
+    telemedicineLink.textContent = 'Telemedicine Benefits';
+    howItWorksLink.textContent = 'How It Works';
+    findDoctorLink.textContent = 'Find a Doctor';
+    patientReviewsLink.textContent = 'Patient Reviews';
+  });
+
+  swahiliBtn.addEventListener('click', () => {
+    // Switch to Kiswahili
+    searchInput.placeholder = 'Tafuta daktari, huduma, au habari...';
+    telemedicineLink.textContent = 'Faida za Telemedicine Kenya';
+    howItWorksLink.textContent = 'Jinsi Telemedicine Inavyofanya Kazi';
+    findDoctorLink.textContent = 'Pata Daktari';
+    patientReviewsLink.textContent = 'Maoni ya Wapatiwa Huduma';
+  });
+</script>
+me">Home</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#about">About Us</a></li>
       <li><a href="#contact">Contact</a></li>
