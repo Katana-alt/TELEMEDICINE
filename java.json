@@ -1,0 +1,14 @@
+{
+  "name": "telemedicine-payment",
+  "version": "1.0.0",
+  "description": "Telemedicine Payment Integration with M-Pesa",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "axios": "^0.21.1",
+    "body-parser": "^1.19.0"
+  }
+}
